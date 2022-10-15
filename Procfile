@@ -1,1 +1,0 @@
-web: java -Dserver.port=$PORT -Dspring.profiles.active=prod $JAVA_OPTS -jar target/expat-2.3.5.jar

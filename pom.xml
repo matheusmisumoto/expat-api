@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>br.com.expat</groupId>
 	<artifactId>expat</artifactId>
-	<version>2.3.4</version>
+	<version>2.3.5</version>
 	<name>expat</name>
 	<description>Site com custos de vida em uma nova cidade</description>
 
