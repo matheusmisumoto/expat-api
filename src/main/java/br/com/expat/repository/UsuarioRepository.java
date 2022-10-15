@@ -9,5 +9,5 @@ import br.com.expat.model.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
 	Usuario findByEmail(String email);
-	
+
 }

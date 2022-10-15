@@ -23,13 +23,13 @@ public class SwaggerConfig {
 	private final ResponseMessage m401 = simpleMessage(401, "Não autorizado");
 	private final ResponseMessage m403 = simpleMessage(403, "Acesso negado");
 	private final ResponseMessage m404 = simpleMessage(404, "Não encontrado");
-	
+
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.useDefaultResponseMessages(false)
 				.globalResponseMessage(RequestMethod.GET, Arrays.asList(m401, m403, m404))
-				.globalResponseMessage(RequestMethod.POST, Arrays.asList(m401, m403)) 
+				.globalResponseMessage(RequestMethod.POST, Arrays.asList(m401, m403))
 				.globalResponseMessage(RequestMethod.PUT, Arrays.asList(m401, m403, m404))
 				.globalResponseMessage(RequestMethod.DELETE, Arrays.asList(m401, m403, m404))
 				.select()
@@ -38,7 +38,7 @@ public class SwaggerConfig {
 				.build()
 				.apiInfo(apiInfo());
 	}
-	
+
 	private ApiInfo apiInfo() {
 		return new ApiInfo(
 			"EXPAT API",
@@ -55,7 +55,7 @@ public class SwaggerConfig {
 			Collections.emptyList() // Vendor Extensions
 		);
 	}
-	
+
 	private ResponseMessage simpleMessage(int code, String msg) {
 		return new ResponseMessageBuilder()
 			.code(code).message(msg).build();

@@ -51,7 +51,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 		response.addHeader("access-control-expose-headers", "Authorization");
 		response.setContentType("application/json");
 		UserDetailsImpl _user = ((UserDetailsImpl) authResult.getPrincipal());
-		response.addHeader("x-admin", (_user.hasRole(TipoUsuario.ADMIN) ? "yes" : "no"));		
+		response.addHeader("x-admin", (_user.hasRole(TipoUsuario.ADMIN) ? "yes" : "no"));
 	}
 
 	@Override
@@ -64,9 +64,9 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 	}
 
 	private String json() {
-		return "{\"timestamp\": " + new Date().getTime() + ", " 
+		return "{\"timestamp\": " + new Date().getTime() + ", "
 				+ "\"status\": 401, " + "\"error\": \"Não autorizado\", "
-				+ "\"message\": \"Email ou senha inválidos\", " 
+				+ "\"message\": \"Email ou senha inválidos\", "
 				+ "\"path\": \"/login\"}";
 	}
 

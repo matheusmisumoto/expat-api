@@ -18,13 +18,13 @@ public class UsuarioService implements ServiceInterface<Usuario> {
 
 	@Autowired
 	private UsuarioRepository repository;
-	
+
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
-	
+
 	public UsuarioService() {
 	}
-	
+
 	@Override
 	public Usuario create(Usuario obj) {
 		obj.setPassword(passwordEncoder.encode(obj.getPassword()));
@@ -39,7 +39,7 @@ public class UsuarioService implements ServiceInterface<Usuario> {
 	}
 
 	@Override
-	public List<Usuario> findAll() {		
+	public List<Usuario> findAll() {
 		return repository.findAll();
 	}
 

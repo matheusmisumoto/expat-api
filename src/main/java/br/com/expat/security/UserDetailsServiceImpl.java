@@ -11,7 +11,7 @@ import br.com.expat.repository.UsuarioRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-	
+
 	@Autowired
 	private UsuarioRepository repo;
 
@@ -23,7 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		}
 		return new UserDetailsImpl(usuario.getId(),
 		                           usuario.getEmail(), usuario.getPassword(),
-		                           usuario.getPerfis());		
+		                           usuario.getPerfis());
 	}
 
 }

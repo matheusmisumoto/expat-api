@@ -15,10 +15,10 @@ public class CustoService implements ServiceInterface<Custo> {
 
 	@Autowired
 	private CustoRepository repository;
-	
+
 	public CustoService() {
 	}
-	
+
 	@Override
 	public Custo create(Custo obj) {
 		repository.save(obj);
@@ -32,7 +32,7 @@ public class CustoService implements ServiceInterface<Custo> {
 	}
 
 	@Override
-	public List<Custo> findAll() {		
+	public List<Custo> findAll() {
 		return repository.findAll();
 	}
 

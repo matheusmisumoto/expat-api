@@ -14,10 +14,10 @@ public class CidadeService implements ServiceInterface<Cidade> {
 
 	@Autowired
 	private CidadeRepository repository;
-	
+
 	public CidadeService() {
 	}
-	
+
 	@Override
 	public Cidade create(Cidade obj) {
 		repository.save(obj);
@@ -31,7 +31,7 @@ public class CidadeService implements ServiceInterface<Cidade> {
 	}
 
 	@Override
-	public List<Cidade> findAll() {		
+	public List<Cidade> findAll() {
 		return repository.findAll();
 	}
 
@@ -57,5 +57,5 @@ public class CidadeService implements ServiceInterface<Cidade> {
 	public Cidade buscaCidade(String estado, String municipio) {
 		return repository.buscaCidade(estado, municipio);
 	}
-	
+
 }

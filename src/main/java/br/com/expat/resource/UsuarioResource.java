@@ -42,7 +42,7 @@ public class UsuarioResource implements ResourceInterface<Usuario> {
 			return ResponseEntity.ok(_usuario);
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
-	
+
 	@Override
 	@PostMapping(produces = "application/json")
 	@ApiOperation(value = "Adiciona um usuário")

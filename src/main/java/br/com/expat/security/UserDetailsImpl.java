@@ -67,7 +67,7 @@ public class UserDetailsImpl implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
-	
+
 	public boolean hasRole(TipoUsuario perfil) {
 		return getAuthorities()
 				.contains(new SimpleGrantedAuthority(perfil.getDescricao()));

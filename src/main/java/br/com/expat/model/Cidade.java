@@ -1,6 +1,7 @@
 package br.com.expat.model;
 
 import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +25,7 @@ public class Cidade implements Serializable {
 
 	@Column(name = "sg_UF", length = 2)
 	private String estado;
-	
+
 	public Cidade() {
 	}
 
@@ -64,9 +65,7 @@ public class Cidade implements Serializable {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		Cidade other = (Cidade) obj;
 		if (id == null) {
@@ -81,10 +80,10 @@ public class Cidade implements Serializable {
 	public String toString() {
 		return "Cidade [id=" + id + ", municipio=" + municipio + ", estado=" + estado + "]";
 	}
-	
-	
 
 
-	
+
+
+
 
 }

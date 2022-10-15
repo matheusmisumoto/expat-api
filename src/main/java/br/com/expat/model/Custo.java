@@ -15,21 +15,21 @@ import javax.persistence.Table;
 @Table(name = "tb_custo")
 @Entity
 public class Custo implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "cd_analise", length = 20)
 	private long id;
-	
+
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn
 	private Cidade codCidade;
 
 	@Column(name = "vl_almoco")
 	private double almoco;
-	
+
 	@Column(name = "vl_aluguel")
 	private double aluguel;
 
@@ -39,7 +39,7 @@ public class Custo implements Serializable {
 	@Column(name = "vl_onibus")
 	private double onibus;
 
-	public Custo() {	
+	public Custo() {
 	}
 
 	public long getId() {
@@ -102,9 +102,7 @@ public class Custo implements Serializable {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		Custo other = (Custo) obj;
 		if (codCidade != other.codCidade)
@@ -120,6 +118,6 @@ public class Custo implements Serializable {
 				+ ", aluguel=" + aluguel + ", cestabasica=" + cestabasica + ", onibus=" + onibus + "]";
 	}
 
-	
+
 
 }

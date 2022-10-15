@@ -26,7 +26,7 @@ public class CustoResource implements ResourceInterface<Custo> {
 
 	@Autowired
 	private CustoService service = new CustoService();
-	
+
 	@Override
 	@GetMapping(produces = "application/json")
 	@ApiOperation(value = "Retorna a lista de registros de custo de vida")
@@ -44,7 +44,7 @@ public class CustoResource implements ResourceInterface<Custo> {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
-	
+
 	@GetMapping(value = "/cidade/{cidade}", produces = "application/json")
 	@ApiOperation(value = "Retorna a média de custo de vida")
 	public ResponseEntity<?> get2(@PathVariable("cidade") Long id) {
@@ -55,7 +55,7 @@ public class CustoResource implements ResourceInterface<Custo> {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 	}
-	
+
 
 	@Override
 	@PostMapping(produces = "application/json")

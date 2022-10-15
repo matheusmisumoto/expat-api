@@ -35,7 +35,7 @@ public class JWTUtil {
 			String username = claims.getSubject();
 			Date expirationDate = claims.getExpiration();
 			Date now = new Date(System.currentTimeMillis());
-			if (username != null && expirationDate != null 
+			if (username != null && expirationDate != null
 					&& now.before(expirationDate)) {
 				return true;
 			}
@@ -62,10 +62,10 @@ public class JWTUtil {
 			return null;
 		}
 	}
-	
+
 	public boolean authorized(Long id) {
 		UserDetailsImpl user = UsuarioService.authenticated();
-		if (user == null || 
+		if (user == null ||
 				(!user.hasRole(TipoUsuario.ADMIN) && !id.equals(user.getId()))) {
 			return false;
 		}
