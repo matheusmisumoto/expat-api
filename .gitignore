@@ -3,6 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+*/.DS_Store
 
 ### STS ###
 .apt_generated
@@ -33,4 +34,4 @@ build/
 .vscode/
 
 ### Production Settings ###
-src/main/resources/application-prod.properties
+src/main/resources/application-local.properties
