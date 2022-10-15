@@ -55,7 +55,7 @@ public class CustoService implements ServiceInterface<Custo> {
 		return false;
 	}
 
-	public MediaDTO mediaCidade(int idCidade) {
+	public MediaDTO mediaCidade(Long idCidade) {
 		return repository.mediaCidade(idCidade);
 	}
 }

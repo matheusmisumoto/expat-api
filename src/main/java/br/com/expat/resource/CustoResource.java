@@ -47,7 +47,7 @@ public class CustoResource implements ResourceInterface<Custo> {
 	
 	@GetMapping(value = "/cidade/{cidade}", produces = "application/json")
 	@ApiOperation(value = "Retorna a média de custo de vida")
-	public ResponseEntity<?> get(@PathVariable("cidade") int id) {
+	public ResponseEntity<?> get2(@PathVariable("cidade") Long id) {
 		MediaDTO _custo = service.mediaCidade(id);
 		if (_custo != null) {
 			return ResponseEntity.ok(_custo);

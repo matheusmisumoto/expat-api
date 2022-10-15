@@ -9,18 +9,18 @@ public class MediaDTO {
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Cidade codCidade;
 
-	private double almoco;
-	private double aluguel;
-	private double cestabasica;
-	private double onibus;
+	private Double almoco;
+	private Double aluguel;
+	private Double cestabasica;
+	private Double onibus;
 
-	public MediaDTO(Cidade codCidade, double almoco, double aluguel, double cestabasica, double onibus) {
+	public MediaDTO(Cidade codCidade, Double almoco, Double aluguel, Double cestabasica, Double onibus) {
 		super();
-		this.codCidade = codCidade;
-		this.almoco = almoco;
-		this.aluguel = aluguel;
-		this.cestabasica = cestabasica;
-		this.onibus = onibus;
+		this.codCidade = (codCidade);
+		this.almoco = (almoco);
+		this.aluguel = (aluguel);
+		this.cestabasica = (cestabasica);
+		this.onibus = (onibus);
 	}
 
 	public Cidade getCidade() {
