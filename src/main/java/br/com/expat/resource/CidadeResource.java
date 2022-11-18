@@ -47,8 +47,10 @@ public class CidadeResource implements ResourceInterface<Cidade> {
 	@GetMapping(value = "/busca/{estado}/{municipio}", produces = "application/json")
 	@ApiOperation(value = "Busca uma cidade por nome e estado")
 	public ResponseEntity<?> get(@PathVariable("estado") String estado, @PathVariable("municipio") String municipio) {
-		return ResponseEntity.ok(service.buscaCidade(estado, municipio));
-
+		Cidade _cidadeResult = service.buscaCidade(estado, municipio);
+		if (_cidadeResult != null)
+			return ResponseEntity.ok(_cidadeResult);
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
 	@Override

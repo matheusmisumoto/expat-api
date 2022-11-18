@@ -32,7 +32,7 @@ public class MediaDTO {
 	}
 
 	public double getAlmoco() {
-		return almoco;
+		return almoco == null ? 0 : almoco;
 	}
 
 	public void setAlmoco(double almoco) {
@@ -40,7 +40,7 @@ public class MediaDTO {
 	}
 
 	public double getAluguel() {
-		return aluguel;
+		return aluguel == null ? 0 : aluguel;
 	}
 
 	public void setAluguel(double aluguel) {
@@ -48,7 +48,7 @@ public class MediaDTO {
 	}
 
 	public double getCestabasica() {
-		return cestabasica;
+		return cestabasica == null ? 0 : cestabasica;
 	}
 
 	public void setCestabasica(double cestabasica) {
@@ -56,7 +56,7 @@ public class MediaDTO {
 	}
 
 	public double getOnibus() {
-		return onibus;
+		return onibus == null ? 0 : onibus;
 	}
 
 	public void setOnibus(double onibus) {
