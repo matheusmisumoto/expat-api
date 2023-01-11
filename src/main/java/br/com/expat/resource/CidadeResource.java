@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiOperation;
 
 
 @RestController
-@RequestMapping("/api/cidade")
+@RequestMapping("/v1/cidade")
 public class CidadeResource implements ResourceInterface<Cidade> {
 
 	@Autowired

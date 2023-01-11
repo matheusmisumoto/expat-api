@@ -20,7 +20,7 @@ import br.com.expat.service.UsuarioService;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/api/usuario")
+@RequestMapping("/v1/usuario")
 public class UsuarioResource implements ResourceInterface<Usuario> {
 
 	@Autowired

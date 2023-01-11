@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiOperation;
 
 
 @RestController
-@RequestMapping("/api/custo")
+@RequestMapping("/v1/custo")
 public class CustoResource implements ResourceInterface<Custo> {
 
 	@Autowired

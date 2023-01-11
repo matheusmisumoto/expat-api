@@ -48,7 +48,7 @@ public class SwaggerConfig {
 			"Versão 1.0",
 			null, // termos de serviço
 			new Contact("Repositório no GitHub",
-			"http://github.com/matheusmisumoto/expat",
+			"https://github.com/matheusmisumoto/expat-api",
 			null),
 			"Uso exclusivamente acadêmico",
 			null, // termos de uso

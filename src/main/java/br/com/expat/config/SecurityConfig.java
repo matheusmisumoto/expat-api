@@ -32,11 +32,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService userDetailsService;
 
-	private static final String[] PUBLIC_MATCHERS = { "/api/usuario/**", "/api/custo/**", "/api/cidade/**" };
+	private static final String[] PUBLIC_MATCHERS = { "/v1/usuario/**", "/v1/custo/**", "/v1/cidade/**" };
 
-	private static final String[] PUBLIC_MATCHERS_POST = { "/api/usuario/**", "/api/custo/**", "/api/cidade/**" };
+	private static final String[] PUBLIC_MATCHERS_POST = { "/v1/usuario/**", "/v1/custo/**", "/v1/cidade/**" };
 
-	private static final String[] PUBLIC_MATCHERS_DELETE = { "/api/usuario/**", "/api/custo/**", "/api/cidade/**" };
+	private static final String[] PUBLIC_MATCHERS_DELETE = { "/v1/usuario/**", "/v1/custo/**", "/v1/cidade/**" };
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -71,6 +71,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/v2/api-docs", "/configuration/ui", "/swagger-resources/**", "/configuration/**",
-				"/swagger-ui.html", "/webjars/**");
+				"/swagger-ui.html", "/", "/index.html", "/webjars/**");
 	}
 }
